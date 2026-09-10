@@ -79,6 +79,8 @@ jobs:
         steps:
             - name: Checkout code
               uses: actions/checkout@v4
+              with:
+                token: ${{ secrets.GH_TOKEN }}
 
             - name: update tag in k8s deployment manifest
               run: |
